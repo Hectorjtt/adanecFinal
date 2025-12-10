@@ -26,24 +26,33 @@
 .inicio-right {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  padding-right: 20px;
 }
 
 .corazon-image {
-  width: 120%;
-  height: calc(100vh - 80px);
+  width: 140%;
+  height: calc(100vh - 60px);
   object-fit: contain;
-  object-position: center;
-  transform: translateX(20px);
+  object-position: right;
+  transform: translateX(300px);
 }
 
 .main-title {
   font-family: 'More Sugar', sans-serif;
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: normal;
   color: #e42626;
   text-shadow: 
+    4px 4px 0px #000000,
+    -4px -4px 0px #000000,
+    4px -4px 0px #000000,
+    -4px 4px 0px #000000,
+    0px 4px 0px #000000,
+    0px -4px 0px #000000,
+    4px 0px 0px #000000,
+    -4px 0px 0px #000000,
     3px 3px 0px #000000,
     -3px -3px 0px #000000,
     3px -3px 0px #000000,
@@ -51,72 +60,65 @@
     0px 3px 0px #000000,
     0px -3px 0px #000000,
     3px 0px 0px #000000,
-    -3px 0px 0px #000000,
-    2px 2px 0px #000000,
-    -2px -2px 0px #000000,
-    2px -2px 0px #000000,
-    -2px 2px 0px #000000,
-    0px 2px 0px #000000,
-    0px -2px 0px #000000,
-    2px 0px 0px #000000,
-    -2px 0px 0px #000000;
-  margin-bottom: 30px;
+    -3px 0px 0px #000000;
+  margin-bottom: 45px;
   line-height: 0.9;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 .mission-lines {
-  margin-bottom: 30px;
+  margin-bottom: 45px;
 }
 
 .mission-lines h2 {
-  font-size: 2.7rem;
+  font-size: 3.8rem;
   font-weight: bold;
   color: #000000;
-  margin: 0 0 5px 0;
+  margin: 0 0 8px 0;
   font-family: Arial, sans-serif;
   line-height: 0.9;
 }
 
 .description {
-  font-size: 1.7rem;
+  font-size: 2.4rem;
   color: #000000;
-  line-height: 1.2;
-  margin-bottom: 40px;
+  line-height: 1.3;
+  margin-bottom: 30px;
   font-family: Arial, sans-serif;
 }
 
 .buttons-container {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .donacion-button {
   background: #f4e5ff;
-  border: 3px solid #000000;
-  border-radius: 25px;
-  padding: 12px 24px;
+  border: 4px solid #000000;
+  border-radius: 30px;
+  padding: 18px 36px;
   font-weight: bold !important;
-  font-size: 16px;
+  font-size: 1.3rem;
   color: #000000;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: 'Arial', sans-serif;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
   animation: parpadeo-donacion 2s ease-in-out infinite;
 }
 
 .clinica-button {
-  padding: 15px 30px;
-  border-radius: 25px;
-  font-size: 1rem;
+  padding: 18px 36px;
+  border-radius: 30px;
+  font-size: 1.3rem;
   font-weight: bold !important;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: Arial, sans-serif;
   background: white;
-  border: 3px solid #e42626;
+  border: 4px solid #e42626;
   color: #000000;
 }
 
@@ -144,15 +146,15 @@
   }
   
   .main-title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
   
   .mission-lines h2 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
   
   .description {
-    font-size: 2rem;
+    font-size: 2.8rem;
   }
   
   .buttons-container {
@@ -161,7 +163,7 @@
   
   .donacion-button,
   .clinica-button {
-    padding: 12px 25px;
-    font-size: 0.9rem;
+    padding: 16px 32px;
+    font-size: 1.1rem;
   }
 }

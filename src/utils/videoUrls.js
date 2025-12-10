@@ -7,13 +7,15 @@
 const getVideoUrl = (path, videoName) => {
   const r2BaseUrl = process.env.REACT_APP_R2_PUBLIC_URL;
   
-  // Debug: mostrar estado de configuración
-  console.log('[VideoUrls Debug]', {
-    hasR2BaseUrl: !!r2BaseUrl,
-    r2BaseUrl: r2BaseUrl,
-    path: path,
-    videoName: videoName
-  });
+  // Debug: solo en desarrollo
+  if (process.env.NODE_ENV === 'development') {
+    console.log('[VideoUrls Debug]', {
+      hasR2BaseUrl: !!r2BaseUrl,
+      r2BaseUrl: r2BaseUrl,
+      path: path,
+      videoName: videoName
+    });
+  }
   
   if (r2BaseUrl) {
     // Usar Cloudflare R2
@@ -37,14 +39,18 @@ const getVideoUrl = (path, videoName) => {
     // Ejemplo: https://pub-xxx.r2.dev/videos/testimonio.mp4
     const finalUrl = `${cleanBaseUrl}${cleanPath}/${encodedVideoName}`;
     
-    // Debug: mostrar URL generada
-    console.log(`[R2 Video URL] ${videoName}:`, finalUrl);
+    // Debug: solo en desarrollo
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`[R2 Video URL] ${videoName}:`, finalUrl);
+    }
     
     return finalUrl;
   }
   
   // Fallback a archivos locales (desarrollo)
-  console.warn(`[Video URL] ⚠️ R2 no configurado, usando local: ${path}/${videoName}`);
+  if (process.env.NODE_ENV === 'development') {
+    console.warn(`[Video URL] ⚠️ R2 no configurado, usando local: ${path}/${videoName}`);
+  }
   return `${path}/${videoName}`;
 };
 

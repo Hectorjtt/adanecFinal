@@ -123,7 +123,7 @@ const QuienesSomos = () => {
           
           <div className="logo-section">
             <div className="adanec-logo">ADANEC</div>
-            <div className="adanec-slogan">30 años cuidando pequeños corazones</div>
+            <div className="adanec-slogan">30 años cuidando<br />pequeños corazones</div>
           </div>
         </div>
 

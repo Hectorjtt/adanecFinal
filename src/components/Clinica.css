@@ -93,6 +93,7 @@
   gap: 40px;
   max-width: 900px;
   margin: 0 auto;
+  margin-left: 600px;
 }
 
 .info-card {
@@ -174,7 +175,7 @@
   margin-bottom: 50px;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  padding-left: 60px;
+  padding-left: 200px;
 }
 
 .clinic-header {
@@ -279,7 +280,7 @@
   margin-top: 0;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  padding-left: 60px;
+  padding-left: 170px;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -355,7 +356,7 @@
 .testimonios-header {
   text-align: left;
   margin-bottom: 40px;
-  padding: 0 0 0 60px;
+  padding: 0 0 0 200px;
 }
 
 .testimonios-title {
@@ -375,10 +376,12 @@
 .testimonios-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 0 40px;
+  gap: 15px;
+  padding: 0 10px 0 200px;
   max-width: none;
   margin: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .testimonio-card {
