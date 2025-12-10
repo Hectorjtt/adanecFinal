@@ -92,7 +92,7 @@ const QuienesSomos = () => {
     'yco.png'
   ];
 
-  const itemsPerSlide = 9;
+  const itemsPerSlide = 7;
   const totalSlides = Math.ceil(empresas.length / itemsPerSlide);
 
   const nextSlide = () => {
