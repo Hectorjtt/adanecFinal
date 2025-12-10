@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 import logotipoImg from '../assets/images/logotipo.png';
 
 const Header = ({ currentPage, setCurrentPage }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const handleNavClick = (page) => {
     setCurrentPage(page);
+    setMenuOpen(false);
   };
 
   return (
@@ -16,7 +19,17 @@ const Header = ({ currentPage, setCurrentPage }) => {
           </div>
         </div>
         
-        <nav className="navigation">
+        <button 
+          className={`menu-toggle ${menuOpen ? 'active' : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav className={`navigation ${menuOpen ? 'nav-open' : ''}`}>
           <button 
             className={`nav-button ${currentPage === 'quienes-somos' ? 'active' : ''}`}
             onClick={() => handleNavClick('quienes-somos')}

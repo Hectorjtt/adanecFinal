@@ -425,6 +425,7 @@
   max-width: 100vw;
 }
 
+
 .testimonio-video:-moz-full-screen {
   object-fit: contain;
   width: auto;
@@ -432,12 +433,14 @@
   max-width: 100vw;
 }
 
+
 .testimonio-video:-ms-fullscreen {
   object-fit: contain;
   width: auto;
   height: 100vh;
   max-width: 100vw;
 }
+
 
 .testimonio-thumbnail {
   width: 100%;
