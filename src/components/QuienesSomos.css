@@ -407,50 +407,86 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero-section {
+  .quienes-somos-hero-section {
     grid-template-columns: 1fr;
     gap: 30px;
-    padding: 0 20px;
+    padding: 20px 20px 0 20px;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .video-section {
+    margin-left: 0;
+    justify-content: center;
+    order: 2;
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
   
   .video-container {
     max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .logo-section {
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+    order: 1;
+    margin-top: 60px;
   }
   
   .adanec-logo {
     font-size: 48px;
     text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
   }
   
   .adanec-slogan {
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
-  }
-  
-  .logo-section {
-    align-items: center;
-    text-align: center;
+    margin: 0;
   }
   
   .info-section {
     padding: 0 20px;
+    margin-left: 0;
+    width: 100%;
   }
   
-  .info-title {
-    font-size: 28px;
+  .info-content {
+    margin-left: 0;
+    padding-left: 0;
+    max-width: 100%;
+  }
+  
+  .quienes-somos-page .info-title {
+    font-size: 24px !important;
+    text-align: left !important;
+    padding-left: 0;
   }
   
   .info-text {
     font-size: 16px;
+    text-align: left;
   }
   
   .stats-section {
-    padding: 40px 20px;
+    padding: 30px 20px;
+    margin-left: 0;
+    width: 100%;
   }
   
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 20px;
+    max-width: 100%;
   }
   
   .stat-icon-circle {
@@ -470,12 +506,240 @@
   .stat-label {
     font-size: 16px;
   }
+  
+  .mission-vision-section {
+    padding: 30px 20px;
+    margin-left: 0;
+    padding-left: 20px;
+    max-width: 100%;
+  }
+  
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 100%;
+  }
+  
+  .mv-title {
+    font-size: 28px;
+  }
+  
+  .mv-text {
+    font-size: 18px;
+  }
+  
+  .values-section {
+    padding: 30px 20px;
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .values-title {
+    font-size: 32px;
+  }
+  
+  .values-subtitle {
+    font-size: 20px;
+  }
+  
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    transform: none;
+  }
+  
+  .value-icon-circle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .value-icon-image {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .value-label {
+    font-size: 14px;
+  }
+  
+  .coverage-section {
+    padding: 30px 20px;
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .coverage-content {
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  .coverage-title {
+    font-size: 28px !important;
+  }
+  
+  .coverage-description {
+    font-size: 16px !important;
+  }
+  
+  .coverage-visuals {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0;
+    max-width: 100%;
+    align-items: center;
+    grid-template-columns: none !important;
+  }
+  
+  .map-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -5px;
+  }
+  
+  .mapa-image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain !important;
+    object-position: center;
+    transform: none !important;
+    display: block;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .staff-photo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+    margin-top: -20px;
+  }
+  
+  .staff-photo {
+    max-width: 85%;
+    width: 85%;
+    height: auto;
+    min-height: auto;
+    object-fit: contain !important;
+    object-position: center;
+    transform: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    display: block;
+    aspect-ratio: auto;
+  }
+  
+  .donors-alliances-section {
+    padding: 30px 20px;
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .donors-alliances-content {
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  .donors-alliances-title {
+    font-size: 28px !important;
+  }
+  
+  .donors-alliances-description {
+    font-size: 16px !important;
+    max-width: 100%;
+  }
+  
+  .donors-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .carousel-wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+  .carousel-container {
+    overflow: visible !important;
+    padding: 0 20px;
+  }
+  
+  .donors-circles-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 100%;
+  }
+  
+  .donors-circle-content {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .donors-circle-image {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .donors-circle-text {
+    font-size: 12px;
+  }
+  
+  .carousel-arrow-left {
+    left: -25px !important;
+  }
+  
+  .carousel-arrow-right {
+    right: -25px !important;
+  }
 }
 
 @media (max-width: 480px) {
+  .quienes-somos-hero-section {
+    padding: 0 15px;
+  }
+  
+  .adanec-logo {
+    font-size: 36px;
+  }
+  
+  .adanec-slogan {
+    font-size: 20px;
+  }
+  
+  .info-section {
+    padding: 0 15px;
+  }
+  
+  .quienes-somos-page .info-title {
+    font-size: 20px !important;
+  }
+  
+  .info-text {
+    font-size: 14px;
+  }
+  
+  .stats-section {
+    padding: 20px 15px;
+  }
+  
   .stats-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 20px;
   }
   
   .stat-icon-circle {
@@ -497,77 +761,25 @@
   }
   
   .mission-vision-section {
-    padding: 30px 20px;
+    padding: 20px 15px;
+    padding-left: 15px;
   }
   
   .mission-vision-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
   }
   
-  .values-section {
-    padding: 30px 20px;
-  }
-  
-  .values-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  .values-title {
-    font-size: 32px;
-  }
-  
-  .values-subtitle {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    padding: 0 15px;
-  }
-  
-  .video-container {
-    border-radius: 10px;
-  }
-  
-  .adanec-logo {
-    font-size: 36px;
-  }
-  
-  .adanec-slogan {
-    font-size: 18px;
-  }
-  
-  .info-section {
-    padding: 0 15px;
-  }
-  
-  .info-title {
+  .mv-title {
     font-size: 24px;
   }
   
-  .play-button-large {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .play-icon-large {
-    font-size: 24px;
-  }
-  
-  .mission-vision-section {
-    padding: 30px 15px;
+  .mv-text {
+    font-size: 16px;
   }
   
   .values-section {
-    padding: 30px 15px;
-  }
-  
-  .values-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    padding: 20px 15px;
   }
   
   .values-title {
@@ -575,68 +787,60 @@
   }
   
   .values-subtitle {
-    font-size: 16px;
-  }
-  
-  .mv-title {
-    font-size: 20px;
-  }
-  
-  .mv-text {
-    font-size: 16px;
-  }
-  
-  .coverage-section {
-    padding: 30px 20px;
-  }
-  
-  .coverage-visuals {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .coverage-title {
-    font-size: 32px;
-  }
-  
-  .coverage-description {
     font-size: 18px;
   }
   
-  .donors-alliances-section {
-    padding: 30px 20px;
-  }
-  
-  .donors-logos-grid {
+  .values-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 15px;
   }
   
-  .donors-alliances-title {
-    font-size: 32px;
-  }
-  
-  .donors-alliances-description {
-    font-size: 18px;
-  }
-  
-  .logo-circle {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .donor-logo-image {
+  .value-icon-circle {
     width: 60px;
     height: 60px;
   }
   
-  .donors-circles-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .value-icon-image {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .value-label {
+    font-size: 12px;
+  }
+  
+  .coverage-section {
+    padding: 20px 15px;
+  }
+  
+  .coverage-title {
+    font-size: 24px;
+  }
+  
+  .coverage-description {
+    font-size: 16px;
+  }
+  
+  .donors-alliances-section {
+    padding: 20px 15px;
+  }
+  
+  .donors-alliances-title {
+    font-size: 24px;
+  }
+  
+  .donors-alliances-description {
+    font-size: 16px;
+  }
+  
+  .donors-logos-grid {
+    grid-template-columns: 1fr;
     gap: 15px;
-    padding: 40px 10px 0 10px;
-    max-width: 400px;
-    margin: 0;
-    justify-content: start;
+  }
+  
+  .donors-circles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
   
   .donors-circle-content {
@@ -645,12 +849,16 @@
   }
   
   .donors-circle-image {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
   
   .donors-circle-text {
     font-size: 10px;
+  }
+  
+  .carousel-wrapper {
+    padding: 0 10px;
   }
   
   .carousel-arrow {
@@ -660,13 +868,66 @@
   }
   
   .carousel-arrow-left {
-    left: 10px;
+    left: -30px !important;
   }
   
   .carousel-arrow-right {
-    right: 10px;
+    right: -30px !important;
+  }
+  
+  .coverage-visuals {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0;
+    align-items: center;
+    grid-template-columns: none !important;
+  }
+  
+  .map-container {
+    padding: 0;
+    margin: 0;
+    margin-bottom: -5px;
+  }
+  
+  .mapa-image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain !important;
+    object-position: center;
+    transform: none !important;
+    display: block;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .staff-photo-container {
+    padding: 0;
+    margin: 0;
+    margin-top: -180px;
+    margin-bottom: -100px;
+  }
+  
+  .staff-photo {
+    max-width: 85%;
+    width: 85%;
+    height: auto;
+    min-height: auto;
+    object-fit: contain !important;
+    object-position: center;
+    transform: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    display: block;
+    aspect-ratio: auto;
+    margin: 0;
+    padding: 0;
   }
 }
+
 
 /* Sección de Cobertura Nacional */
 .coverage-section {

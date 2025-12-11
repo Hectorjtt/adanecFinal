@@ -130,7 +130,7 @@ const QuienesSomos = () => {
         {/* Sección de información */}
         <div className="info-section">
           <div className="info-content">
-            <h2 className="info-title">ADANEC (Asociación de Ayuda a Niños en Estado Crítico A.B.P.)</h2>
+            <h2 className="info-title">ADANEC (Asociación de Ayuda a Niños<br />en Estado Crítico A.B.P.)</h2>
             <p className="info-text">
               Es una organización legalmente constituida el 15 de agosto de 1995 en Monterrey, Nuevo León, México. Nuestro compromiso es atender a bebés, niñas, niños y adolescentes en un estado crítico de salud, enfrentando condiciones que ponen en riesgo su vida. Nos esforzamos por garantizar diagnósticos precisos y especializados, facilitando así una atención rápida y eficiente para prevenir pérdidas de vida en casos de enfermedades tratables.
             </p>
