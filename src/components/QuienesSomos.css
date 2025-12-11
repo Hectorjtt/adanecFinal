@@ -490,13 +490,30 @@
   }
   
   .stat-icon-circle {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
   }
   
   .stat-icon-image {
-    width: 70px;
-    height: 70px;
+    width: 95px;
+    height: 95px;
+    transform: scale(2.0) !important;
+  }
+  
+  .stat-card:first-child .stat-icon-image {
+    transform: scale(2.0) translateY(-4px) !important;
+  }
+  
+  .stat-card:nth-child(2) .stat-icon-image {
+    transform: scale(2.0) translateY(0px) translateX(-1.5px) !important;
+  }
+  
+  .stat-card:nth-child(3) .stat-icon-image {
+    transform: scale(2.0) translateY(3px) translateX(-1.5px) !important;
+  }
+  
+  .stat-card:nth-child(4) .stat-icon-image {
+    transform: scale(2.0) translateY(0px) translateX(-2px) !important;
   }
   
   .stat-number {
@@ -743,13 +760,30 @@
   }
   
   .stat-icon-circle {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
   }
   
   .stat-icon-image {
-    width: 60px;
-    height: 60px;
+    width: 85px;
+    height: 85px;
+    transform: scale(1.9) !important;
+  }
+  
+  .stat-card:first-child .stat-icon-image {
+    transform: scale(1.9) translateY(-4px) !important;
+  }
+  
+  .stat-card:nth-child(2) .stat-icon-image {
+    transform: scale(1.9) translateY(0px) translateX(-1.5px) !important;
+  }
+  
+  .stat-card:nth-child(3) .stat-icon-image {
+    transform: scale(1.9) translateY(3px) translateX(-1.5px) !important;
+  }
+  
+  .stat-card:nth-child(4) .stat-icon-image {
+    transform: scale(1.9) translateY(0px) translateX(-2px) !important;
   }
   
   .stat-number {

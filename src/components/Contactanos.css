@@ -125,8 +125,14 @@
 }
 
 @media (max-width: 768px) {
+  .contactanos-page {
+    padding-top: 100px !important;
+    margin-top: 0 !important;
+  }
+  
   .contactanos-content {
     padding: 20px 15px;
+    padding-top: 40px;
   }
   
   .contact-item {
@@ -135,13 +141,22 @@
   }
   
   .contact-icon {
-    width: 60px;
-    height: 60px;
+    width: 75px;
+    height: 75px;
   }
   
   .icon-image {
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
+    transform: scale(2.5);
+  }
+  
+  .contact-item:nth-child(5) .icon-image {
+    transform: scale(2.5) translateX(0.5px);
+  }
+  
+  .contact-item:nth-child(3) .icon-image {
+    transform: scale(2.5) translateY(-1.5px);
   }
   
   .contact-title {
@@ -152,7 +167,13 @@
     font-size: 16px;
   }
   
+  .map-section {
+    width: 100%;
+    max-width: 100%;
+  }
+  
   .map-container {
     height: 300px;
+    width: 100%;
   }
 }
