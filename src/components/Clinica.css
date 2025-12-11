@@ -476,26 +476,6 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .testimonios-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    padding: 0 20px;
-  }
-  
-  .testimonios-title {
-    font-size: 28px;
-  }
-  
-  .play-button {
-    width: 70px;
-    height: 70px;
-  }
-  
-  .play-icon {
-    font-size: 24px;
-  }
-}
 
 @media (max-width: 480px) {
   .testimonios-grid {
@@ -516,17 +496,44 @@
 
 @media (max-width: 768px) {
   .clinica-content {
-    padding-top: 100px;
+    padding-top: 60px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .hero-section {
+    padding: 20px;
+    width: 100%;
+    margin-top: 40px;
   }
   
   .clinica-main-title,
   .clinica-main-title-highlight {
     font-size: 36px;
+    padding: 0 20px;
+  }
+  
+  .clinica-main-description {
+    font-size: 20px;
+    padding: 0 20px;
+  }
+  
+  .info-section {
+    padding: 0 20px;
+    width: 100%;
+    margin-left: 0;
   }
   
   .info-cards {
     grid-template-columns: 1fr;
     gap: 30px;
+    margin-left: 0 !important;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .info-card {
+    align-items: center;
   }
   
   .info-icon-circle {
@@ -553,22 +560,74 @@
     transform: scale(1.0) translateX(4px);
   }
   
+  .info-title {
+    font-size: 22px !important;
+    max-width: 100%;
+  }
+  
+  .clinic-section {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px;
+  }
+  
+  .clinic-header,
+  .programs-header {
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
   .clinic-title,
   .programs-title {
     font-size: 28px;
   }
   
+  .programs-description {
+    font-size: 18px;
+    text-align: left;
+    max-width: 100%;
+  }
+  
+  .services-section {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px;
+  }
+  
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-  }
-  
-  .programs-description {
-    font-size: 18px;
+    max-width: 100%;
   }
   
   .service-title {
     font-size: 16px;
+  }
+  
+  .testimonios-section {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  
+  .testimonios-header {
+    padding: 0 20px !important;
+    text-align: left;
+  }
+  
+  .testimonios-title {
+    font-size: 32px;
+  }
+  
+  .testimonios-subtitle {
+    font-size: 20px;
+  }
+  
+  .testimonios-grid {
+    padding: 0 20px !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
   
   .clinica-badge {
@@ -579,9 +638,40 @@
 }
 
 @media (max-width: 480px) {
+  .clinica-content {
+    padding-top: 60px;
+  }
+  
+  .hero-section {
+    padding: 15px;
+  }
+  
   .clinica-main-title,
   .clinica-main-title-highlight {
     font-size: 28px;
+    padding: 0 15px;
+  }
+  
+  .clinica-main-description {
+    font-size: 18px;
+    padding: 0 15px;
+  }
+  
+  .info-section {
+    padding: 0 15px;
+  }
+  
+  .info-cards {
+    gap: 25px;
+  }
+  
+  .info-title {
+    font-size: 20px !important;
+  }
+  
+  .clinic-section {
+    padding-left: 15px !important;
+    padding-right: 15px;
   }
   
   .clinic-header,
@@ -589,13 +679,52 @@
     flex-direction: column;
     text-align: center;
     gap: 10px;
+    align-items: center;
+  }
+  
+  .clinic-title,
+  .programs-title {
+    font-size: 24px;
+  }
+  
+  .programs-description {
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .services-section {
+    padding-left: 15px !important;
+    padding-right: 15px;
   }
   
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .service-card {
     padding: 20px 15px;
+  }
+  
+  .service-title {
+    font-size: 18px;
+  }
+  
+  .testimonios-header {
+    padding: 0 15px !important;
+  }
+  
+  .testimonios-title {
+    font-size: 28px;
+  }
+  
+  .testimonios-subtitle {
+    font-size: 18px;
+  }
+  
+  .testimonios-grid {
+    padding: 0 15px !important;
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 }
