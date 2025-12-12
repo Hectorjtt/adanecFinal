@@ -156,7 +156,7 @@
     width: 150px !important;
     height: 150px !important;
     left: -30px;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     position: absolute;
     z-index: 10;
@@ -193,8 +193,8 @@
   }
 
   .nav-button {
-    width: 100%;
-    max-width: 300px;
+    width: auto;
+    max-width: 200px;
     padding: 15px 20px;
     font-size: 18px;
     text-align: center;
@@ -228,7 +228,7 @@
     width: 150px !important;
     height: 150px !important;
     left: -30px;
-    top: 50%;
+    top: 90%;
     transform: translateY(-50%);
     position: absolute;
     z-index: 10;
