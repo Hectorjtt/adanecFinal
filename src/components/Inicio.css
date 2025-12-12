@@ -188,6 +188,26 @@
     font-size: 2.5rem;
     margin-bottom: 25px;
     letter-spacing: 1px;
+    text-shadow: 
+      4px 4px 0px #000000,
+      -4px -4px 0px #000000,
+      4px -4px 0px #000000,
+      -4px 4px 0px #000000,
+      0px 4px 0px #000000,
+      0px -4px 0px #000000,
+      4px 0px 0px #000000,
+      -4px 0px 0px #000000,
+      3px 3px 0px #000000,
+      -3px -3px 0px #000000,
+      3px -3px 0px #000000,
+      -3px 3px 0px #000000,
+      0px 3px 0px #000000,
+      0px -3px 0px #000000,
+      3px 0px 0px #000000,
+      -3px 0px 0px #000000 !important;
+    -webkit-text-stroke: 4px #000000;
+    -webkit-text-fill-color: #e42626;
+    paint-order: stroke fill;
   }
   
   .mission-lines {
@@ -230,6 +250,26 @@
     font-size: 2rem;
     margin-bottom: 20px;
     letter-spacing: 0.5px;
+    text-shadow: 
+      3px 3px 0px #000000,
+      -3px -3px 0px #000000,
+      3px -3px 0px #000000,
+      -3px 3px 0px #000000,
+      0px 3px 0px #000000,
+      0px -3px 0px #000000,
+      3px 0px 0px #000000,
+      -3px 0px 0px #000000,
+      2px 2px 0px #000000,
+      -2px -2px 0px #000000,
+      2px -2px 0px #000000,
+      -2px 2px 0px #000000,
+      0px 2px 0px #000000,
+      0px -2px 0px #000000,
+      2px 0px 0px #000000,
+      -2px 0px 0px #000000 !important;
+    -webkit-text-stroke: 3px #000000;
+    -webkit-text-fill-color: #e42626;
+    paint-order: stroke fill;
   }
 
   .mission-lines h2 {
