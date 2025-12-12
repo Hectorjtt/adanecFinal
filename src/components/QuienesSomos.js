@@ -25,19 +25,28 @@ const QuienesSomos = () => {
     setModalOpen(false);
   };
 
-  // Lista de todas las empresas (autoactualizada con archivos actuales en public/empresas)
+  // Lista de todas las empresas en el orden en que aparecen en la carpeta
   const empresas = [
+    '1 SECREATARIA DE IGUALDAD .png',
+    '2 SECRETARIA DE SALUD.png',
+    '3 ARCA CONTINENTAL.png',
+    '4 JESUS MONTEMAYOR.png',
+    '5 NACIONAL MONTE DE PIEDAD.jpg',
+    '6 KENWORTH.png',
+    '7 FRISA.png',
     '02 Brillamont® Blue Logo.png',
     '1200px-Ternium-Logo-1.jpg',
     '7-LATINAMERICAN.png',
+    'abc4kids.png',
     'alenlogo.png',
     'amaerimed-hospitals.png',
     'Arca_continental_logo.png',
     'asfm.png',
-    'BanBajío_Logotipo.png',
+    'BanBajío_Logotipo.png',
     'bebecardio.png',
     'callcom.png',
     'cemefi.png',
+    'centro de primera infancia.jpg',
     'centuryfastenersmex.png',
     'clisa.png',
     'cocoasociacion.jpg',
@@ -49,9 +58,8 @@ const QuienesSomos = () => {
     'femsa.png',
     'field_fastener_mexico_logo.jpg',
     'fomentomoral.png',
-    'frisafundacion.png',
-    'Fundacion-Jesus-M-Montemayor-Logo.png',
     'Fundacion-Promax-1-300x300.png',
+    'fundacioncemix.jpg',
     'hidalgomaldonado.png',
     'himalaya logo.jpeg',
     'hotelnuve.png',
@@ -60,8 +68,6 @@ const QuienesSomos = () => {
     'logo secretaria nl.png',
     'logo smart.png',
     'logo_chapa.jpg',
-    'Logo_de_la_Secretaría_de_Igualdad_e_Inclusión_de_Nuevo_León_(2021).svg.png',
-    'Logo_de_la_Secretaría_de_Salud_de_Nuevo_León_(2021).svg.png',
     'Logo_de_la_UANL.svg.png',
     'Logo_of_the_HEB_Grocery_Company,_LP.png',
     'Logo-ACMES-completo-Trans-300x113.png',
@@ -71,21 +77,22 @@ const QuienesSomos = () => {
     'maatadvisory.png',
     'maximacomercial.png',
     'medtronic-logo.png',
-    'montedepiedadlogo.jpg',
-    'niños360logo.jpeg',
+    'niños360logo.jpeg',
     'operacioncorazon.jpeg',
+    'Oxxo_Logo.svg.png',
     'pkf.jpeg',
-    'png-transparent-kenworth-red-logo-car-logos-thumbnail.png',
     'quintadorada.jpg',
     'ruba.png',
     'salvandolatidos.jpg',
-    'sanatorioespañol.png',
+    'sanatorioespañol.png',
     'seca.png',
+    'sermedicar.png',
     'serycrecer.png',
     'tecmilenio.png',
     'tecnologico-de-monterrey-blue.png',
     'Terumo.svg.png',
-    'treviñoelizondo.png',
+    'TREVIÑO consultores.png',
+    'treviñoelizondo.png',
     'udem-logotipo-principal.png',
     'universidadlux.png',
     'upf logo.png',
@@ -355,7 +362,7 @@ const QuienesSomos = () => {
                               <div className="donors-circle-content">
                                 <img 
                                   src={process.env.PUBLIC_URL + `/empresas/${empresa}`} 
-                                  alt={empresa.replace('.png', '').replace('.jpg', '')} 
+                                  alt={empresa.replace('.png', '').replace('.jpg', '').replace('.jpeg', '').replace('.svg', '')} 
                                   className="donors-circle-image" 
                                 />
                               </div>
