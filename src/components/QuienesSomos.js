@@ -12,7 +12,7 @@ import mapaImg from '../assets/images/mapa.png';
 import circluloImg from '../assets/images/circlulo.png';
 
 // Lista de todas las empresas en el orden en que aparecen en la carpeta
-const empresas = [
+  const empresas = [
     '1 SECREATARIA DE IGUALDAD .png',
     '2 SECRETARIA DE SALUD.png',
     '3 ARCA CONTINENTAL.png',
@@ -83,7 +83,7 @@ const empresas = [
     'universidadlux.png',
     'upf logo.png',
     'yco.png'
-];
+  ];
 
 const QuienesSomos = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -112,10 +112,17 @@ const QuienesSomos = () => {
         newItemsPerSlide = 7; // 7 columnas en desktop
       }
       
+      const newTotalSlides = Math.ceil(empresas.length / newItemsPerSlide);
+      
       setItemsPerSlide(newItemsPerSlide);
       
-      // Resetear al primer slide cuando cambia el tamaño de pantalla
-      setCurrentSlide(0);
+      // Asegurar que currentSlide esté dentro del rango válido
+      setCurrentSlide((prev) => {
+        if (prev >= newTotalSlides) {
+          return Math.max(0, newTotalSlides - 1);
+        }
+        return prev;
+      });
     };
 
     updateItemsPerSlide();
@@ -123,19 +130,20 @@ const QuienesSomos = () => {
     return () => window.removeEventListener('resize', updateItemsPerSlide);
   }, []);
 
-  // Recalcular totalSlides cuando cambia itemsPerSlide
+  // Calcular totalSlides basado en itemsPerSlide actual
   const totalSlides = Math.ceil(empresas.length / itemsPerSlide);
   
-  // Asegurar que currentSlide no esté fuera de rango
+  // Asegurar que currentSlide esté siempre dentro del rango válido
   useEffect(() => {
-    if (currentSlide >= totalSlides && totalSlides > 0) {
-      setCurrentSlide(totalSlides - 1);
+    if (totalSlides > 0 && currentSlide >= totalSlides) {
+      setCurrentSlide(Math.max(0, totalSlides - 1));
     }
   }, [totalSlides, currentSlide]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => {
-      if (prev < totalSlides - 1) {
+      const maxSlide = Math.max(0, totalSlides - 1);
+      if (prev < maxSlide) {
         return prev + 1;
       }
       return prev; // Se queda en el último slide
@@ -384,7 +392,12 @@ const QuienesSomos = () => {
             </p>
             
             <div className="carousel-container">
-              <button className="carousel-arrow carousel-arrow-left" onClick={prevSlide}>
+              <button 
+                className="carousel-arrow carousel-arrow-left" 
+                onClick={prevSlide}
+                disabled={currentSlide === 0}
+                style={{ opacity: currentSlide === 0 ? 0.5 : 1, cursor: currentSlide === 0 ? 'not-allowed' : 'pointer' }}
+              >
                 ‹
               </button>
               
@@ -395,7 +408,7 @@ const QuienesSomos = () => {
                 >
                   {Array.from({ length: totalSlides }, (_, slideIndex) => {
                     const startIndex = slideIndex * itemsPerSlide;
-                    const endIndex = startIndex + itemsPerSlide;
+                    const endIndex = Math.min(startIndex + itemsPerSlide, empresas.length);
                     const slideEmpresas = empresas.slice(startIndex, endIndex);
                     
                     // Solo renderizar si hay empresas en este slide
@@ -424,7 +437,12 @@ const QuienesSomos = () => {
                 </div>
               </div>
               
-              <button className="carousel-arrow carousel-arrow-right" onClick={nextSlide}>
+              <button 
+                className="carousel-arrow carousel-arrow-right" 
+                onClick={nextSlide}
+                disabled={currentSlide >= totalSlides - 1}
+                style={{ opacity: currentSlide >= totalSlides - 1 ? 0.5 : 1, cursor: currentSlide >= totalSlides - 1 ? 'not-allowed' : 'pointer' }}
+              >
                 ›
               </button>
             </div>

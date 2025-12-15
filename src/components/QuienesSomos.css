@@ -687,29 +687,79 @@
   }
   
   .carousel-wrapper {
-    max-width: 100%;
-    padding: 0 20px;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
   }
   
   .carousel-container {
     overflow: visible !important;
-    padding: 0 20px;
+    padding: 0 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .carousel-slide {
+    display: flex !important;
+    flex-direction: row !important;
+    width: auto !important;
+  }
+  
+  .carousel-slide-content {
+    padding: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
   }
   
   .donors-circles-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    max-width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-auto-rows: auto !important;
+    gap: 15px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    grid-auto-flow: row !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+  }
+  
+  .donors-circle {
+    width: auto !important;
+    max-width: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    position: relative !important;
   }
   
   .donors-circle-content {
-    width: 75px;
-    height: 75px;
+    flex-shrink: 0 !important;
+    width: 90px !important;
+    height: 90px !important;
+    min-width: 90px !important;
+    min-height: 90px !important;
+    max-width: 90px !important;
+    max-height: 90px !important;
   }
   
   .donors-circle-image {
-    width: 50px;
-    height: 50px;
+    width: 70px !important;
+    height: 70px !important;
+    max-width: 70px !important;
+    max-height: 70px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    padding: 5px !important;
+    box-sizing: border-box !important;
+    transform: none !important;
   }
   
   .donors-circle-text {
@@ -891,19 +941,77 @@
     gap: 15px;
   }
   
+  .carousel-slide-content {
+    padding: 0 !important;
+    display: block !important;
+    width: 100% !important;
+  }
+  
   .donors-circles-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-auto-rows: auto !important;
+    gap: 10px !important;
+    min-height: 80px;
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-auto-flow: row !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+  
+  .carousel-wrapper {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .carousel-container {
+    overflow: visible !important;
+    padding: 0 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .carousel-slide {
+    display: flex !important;
+    flex-direction: row !important;
+    width: auto !important;
+  }
+  
+  .donors-circle {
+    width: auto !important;
+    max-width: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    position: relative !important;
   }
   
   .donors-circle-content {
-    width: 70px;
-    height: 70px;
+    flex-shrink: 0 !important;
+    width: 85px !important;
+    height: 85px !important;
+    min-width: 85px !important;
+    min-height: 85px !important;
+    max-width: 85px !important;
+    max-height: 85px !important;
   }
   
   .donors-circle-image {
-    width: 45px;
-    height: 45px;
+    width: 65px !important;
+    height: 65px !important;
+    max-width: 65px !important;
+    max-height: 65px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    padding: 5px !important;
+    box-sizing: border-box !important;
+    transform: none !important;
   }
   
   .donors-circle-text {
@@ -1154,6 +1262,7 @@
 .donors-circles-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  grid-auto-flow: row;
   gap: 40px;
   align-items: center;
   justify-items: center;
@@ -1161,6 +1270,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 10px 0 10px;
+  min-height: 120px;
 }
 
 /* Círculo de donadores */
@@ -1170,11 +1280,13 @@
   align-items: center;
   width: 100%;
   max-width: 110px;
+  min-width: 0;
+  margin: 0;
 }
 
 .donors-circle-content {
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   border: 2px solid #000000;
   background-color: white;
@@ -1184,6 +1296,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   flex-shrink: 0;
+  min-width: 160px;
+  min-height: 160px;
+  max-width: 160px;
+  max-height: 160px;
 }
 
 .donors-circle-content:hover {
@@ -1199,11 +1315,15 @@
 }
 
 .donors-circle-image {
-  width: 90px;
-  height: 90px;
+  width: 115px;
+  height: 115px;
   object-fit: contain;
-  border-radius: 50%;
-  transform: scale(1.3);
+  object-position: center;
+  max-width: 115px;
+  max-height: 115px;
+  padding: 10px;
+  box-sizing: border-box;
+  transform: none !important;
 }
 
 /* Estilos del carrusel */
@@ -1224,12 +1344,17 @@
 
 .carousel-slide {
   display: flex;
+  flex-direction: row;
   transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide-content {
   min-width: 100%;
+  width: 100%;
   flex-shrink: 0;
+  display: block;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .carousel-arrow {
