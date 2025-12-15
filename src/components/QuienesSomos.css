@@ -776,11 +776,11 @@
   }
   
   .carousel-arrow-left {
-    left: 5px !important;
+    left: -40px !important;
   }
   
   .carousel-arrow-right {
-    right: 5px !important;
+    right: -40px !important;
   }
   
   .carousel-dots {
@@ -1032,11 +1032,11 @@
   }
   
   .carousel-arrow-left {
-    left: 5px !important;
+    left: -40px !important;
   }
   
   .carousel-arrow-right {
-    right: 5px !important;
+    right: -40px !important;
   }
   
   .carousel-dots {
@@ -1373,7 +1373,7 @@
   transition: background-color 0.3s ease;
   z-index: 10;
   position: absolute;
-  top: 60%;
+  top: 50%;
   transform: translateY(-50%);
 }
 
@@ -1382,11 +1382,11 @@
 }
 
 .carousel-arrow-left {
-  left: 20px;
+  left: -30px;
 }
 
 .carousel-arrow-right {
-  right: 20px;
+  right: -30px;
 }
 
 .carousel-dots {
