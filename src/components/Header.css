@@ -49,6 +49,7 @@
   width: 80%;
   height: 80%;
   object-fit: contain;
+  transform: translateX(5px);
 }
 
 .navigation {

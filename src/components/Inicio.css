@@ -234,10 +234,12 @@
   
   .donacion-button,
   .clinica-button {
-    padding: 14px 28px;
+    padding: 14px 24px;
     font-size: 1rem;
-    flex: 1;
-    min-width: 200px;
+    width: 220px;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    border-width: 2px;
   }
 }
 
@@ -284,13 +286,16 @@
   .buttons-container {
     flex-direction: column;
     gap: 12px;
+    align-items: center;
   }
 
   .donacion-button,
   .clinica-button {
-    width: 100%;
-    padding: 12px 24px;
+    width: 200px;
+    padding: 12px 20px;
     font-size: 0.95rem;
+    white-space: nowrap;
+    border-width: 2px;
   }
 
   .corazon-image {
