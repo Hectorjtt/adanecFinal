@@ -67,9 +67,14 @@ const Dona = () => {
               <p className="card-description">
                 Realiza tu donación de forma segura a través de nuestra plataforma en línea.
               </p>
-              <div className="donation-link">
-                <strong>https://assistant.velpay.mx/ recurring-payment/12523</strong>
-              </div>
+              <a 
+                href="https://assistant.velpay.mx/recurring-payment/12523" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="donation-link"
+              >
+                <strong>https://assistant.velpay.mx/recurring-payment/12523</strong>
+              </a>
             </div>
 
             {/* Transferencia bancaria */}

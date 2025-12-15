@@ -703,25 +703,44 @@
   }
   
   .donors-circle-content {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
   }
   
   .donors-circle-image {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
   
   .donors-circle-text {
     font-size: 12px;
   }
   
+  .carousel-arrow {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 28px !important;
+    z-index: 10;
+    background: #e74c3c !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  }
+  
   .carousel-arrow-left {
-    left: -25px !important;
+    left: 5px !important;
   }
   
   .carousel-arrow-right {
-    right: -25px !important;
+    right: 5px !important;
+  }
+  
+  .carousel-dots {
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .carousel-dot {
+    width: 12px;
+    height: 12px;
   }
 }
 
@@ -878,13 +897,13 @@
   }
   
   .donors-circle-content {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
   
   .donors-circle-image {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   }
   
   .donors-circle-text {
@@ -892,21 +911,34 @@
   }
   
   .carousel-wrapper {
-    padding: 0 10px;
+    padding: 0 50px;
   }
   
   .carousel-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 28px !important;
+    z-index: 10;
+    background: #e74c3c !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
   }
   
   .carousel-arrow-left {
-    left: -30px !important;
+    left: 5px !important;
   }
   
   .carousel-arrow-right {
-    right: -30px !important;
+    right: 5px !important;
+  }
+  
+  .carousel-dots {
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .carousel-dot {
+    width: 12px;
+    height: 12px;
   }
   
   .coverage-visuals {

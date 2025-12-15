@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './QuienesSomos.css';
 import ValueModal from './ValueModal';
 import quienes1Img from '../assets/images/quienes1.png';
@@ -11,22 +11,8 @@ import mv3Img from '../assets/images/mv3.png';
 import mapaImg from '../assets/images/mapa.png';
 import circluloImg from '../assets/images/circlulo.png';
 
-const QuienesSomos = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedValue, setSelectedValue] = useState('dignidad');
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const handleValueClick = (value) => {
-    setSelectedValue(value);
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-
-  // Lista de todas las empresas en el orden en que aparecen en la carpeta
-  const empresas = [
+// Lista de todas las empresas en el orden en que aparecen en la carpeta
+const empresas = [
     '1 SECREATARIA DE IGUALDAD .png',
     '2 SECRETARIA DE SALUD.png',
     '3 ARCA CONTINENTAL.png',
@@ -97,17 +83,72 @@ const QuienesSomos = () => {
     'universidadlux.png',
     'upf logo.png',
     'yco.png'
-  ];
+];
 
-  const itemsPerSlide = 7;
+const QuienesSomos = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedValue, setSelectedValue] = useState('dignidad');
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [itemsPerSlide, setItemsPerSlide] = useState(7);
+
+  const handleValueClick = (value) => {
+    setSelectedValue(value);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  // Detectar tamaño de pantalla y ajustar items por slide
+  useEffect(() => {
+    const updateItemsPerSlide = () => {
+      let newItemsPerSlide;
+      if (window.innerWidth <= 480) {
+        newItemsPerSlide = 2; // 2 columnas en móviles pequeños
+      } else if (window.innerWidth <= 768) {
+        newItemsPerSlide = 3; // 3 columnas en tablets/móviles
+      } else {
+        newItemsPerSlide = 7; // 7 columnas en desktop
+      }
+      
+      setItemsPerSlide(newItemsPerSlide);
+      
+      // Resetear al primer slide cuando cambia el tamaño de pantalla
+      setCurrentSlide(0);
+    };
+
+    updateItemsPerSlide();
+    window.addEventListener('resize', updateItemsPerSlide);
+    return () => window.removeEventListener('resize', updateItemsPerSlide);
+  }, []);
+
+  // Recalcular totalSlides cuando cambia itemsPerSlide
   const totalSlides = Math.ceil(empresas.length / itemsPerSlide);
+  
+  // Asegurar que currentSlide no esté fuera de rango
+  useEffect(() => {
+    if (currentSlide >= totalSlides && totalSlides > 0) {
+      setCurrentSlide(totalSlides - 1);
+    }
+  }, [totalSlides, currentSlide]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    setCurrentSlide((prev) => {
+      if (prev < totalSlides - 1) {
+        return prev + 1;
+      }
+      return prev; // Se queda en el último slide
+    });
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+    setCurrentSlide((prev) => {
+      if (prev > 0) {
+        return prev - 1;
+      }
+      return prev; // Se queda en el primer slide
+    });
   };
 
   return (
@@ -352,25 +393,34 @@ const QuienesSomos = () => {
                   className="carousel-slide" 
                   style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 >
-                  {Array.from({ length: totalSlides }, (_, slideIndex) => (
-                    <div key={slideIndex} className="carousel-slide-content">
-                      <div className="donors-circles-grid">
-                        {empresas
-                          .slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide)
-                          .map((empresa, index) => (
-                            <div key={index} className="donors-circle">
+                  {Array.from({ length: totalSlides }, (_, slideIndex) => {
+                    const startIndex = slideIndex * itemsPerSlide;
+                    const endIndex = startIndex + itemsPerSlide;
+                    const slideEmpresas = empresas.slice(startIndex, endIndex);
+                    
+                    // Solo renderizar si hay empresas en este slide
+                    if (slideEmpresas.length === 0) {
+                      return null;
+                    }
+                    
+                    return (
+                      <div key={slideIndex} className="carousel-slide-content">
+                        <div className="donors-circles-grid">
+                          {slideEmpresas.map((empresa, index) => (
+                            <div key={`${slideIndex}-${index}`} className="donors-circle">
                               <div className="donors-circle-content">
                                 <img 
                                   src={process.env.PUBLIC_URL + `/empresas/${empresa}`} 
-                                  alt={empresa.replace('.png', '').replace('.jpg', '').replace('.jpeg', '').replace('.svg', '')} 
+                                  alt={empresa.replace(/\.(png|jpg|jpeg|svg)$/i, '')} 
                                   className="donors-circle-image" 
                                 />
                               </div>
                             </div>
                           ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
               

@@ -9,43 +9,43 @@ const Transparencia = () => {
       año: '2024',
       titulo: 'Informe anual 2024',
       subtitulo: 'Disponible su descarga',
-      pdf: 'INFORME 2024 - PEQUEÑOS CORAZONES POR ADANEC.pdf',
+      url: 'https://www.adanec.org/_files/ugd/655df7_4decfd9630b044138a7d8fe6f67489f5.pdf',
       disponible: true
     },
     {
       año: '2023',
       titulo: 'Informe anual 2023',
       subtitulo: 'Disponible su descarga',
-      pdf: 'ADANEC INFORME ANUAL 2023.pdf',
+      url: 'https://www.adanec.org/_files/ugd/655df7_a312ae92a1f944bd9cc3b2ab10790906.pdf',
       disponible: true
     },
     {
       año: '2022',
       titulo: 'Informe anual 2022',
       subtitulo: 'Próximamente disponible',
-      pdf: null,
+      url: null,
       disponible: false
     },
     {
       año: '2021',
       titulo: 'Informe anual 2021',
       subtitulo: 'Disponible su descarga',
-      pdf: 'INFORME ANUAL  2021 (1).pdf',
+      url: 'https://www.adanec.org/_files/ugd/655df7_3664d7318a844cf7a34b29582d7e6bdb.pdf',
       disponible: true
     },
     {
       año: '2020',
       titulo: 'Informe anual 2020',
       subtitulo: 'Disponible su descarga',
-      pdf: 'INFORME-ANUAL-2020.pdf',
+      url: 'https://www.adanec.org/_files/ugd/655df7_db569a57ca6548de9472616b755af515.pdf',
       disponible: true
     }
   ];
 
   const handleInformeClick = (informe) => {
-    if (informe.disponible && informe.pdf) {
+    if (informe.disponible && informe.url) {
       // Abrir el PDF en una nueva pestaña
-      window.open(`/cuentas/${informe.pdf}`, '_blank');
+      window.open(informe.url, '_blank', 'noopener,noreferrer');
     }
   };
 
