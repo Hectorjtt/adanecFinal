@@ -13,15 +13,15 @@ import IndicadorPagina from './components/IndicadorPagina';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(() => {
-    // Intentar obtener desde localStorage o URL, por defecto 'inicio'
-    const savedPage = localStorage.getItem('currentPage');
+    // Siempre iniciar en 'inicio', pero permitir hash para enlaces compartidos
     const hash = window.location.hash.substring(1);
-    return hash || savedPage || 'inicio';
+    // Solo usar el hash si es una página válida, de lo contrario usar 'inicio'
+    const validPages = ['inicio', 'noticias', 'transparencia', 'quienes-somos', 'clinica', 'dona', 'contactanos'];
+    return (hash && validPages.includes(hash)) ? hash : 'inicio';
   });
 
-  // Guardar la página actual en localStorage y actualizar la URL
+  // Actualizar la URL con el hash, pero no guardar en localStorage
   useEffect(() => {
-    localStorage.setItem('currentPage', currentPage);
     window.location.hash = currentPage;
   }, [currentPage]);
 

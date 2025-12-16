@@ -1263,7 +1263,7 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-auto-flow: row;
-  gap: 40px;
+  gap: 180px;
   align-items: center;
   justify-items: center;
   width: 100%;
@@ -1373,7 +1373,7 @@
   transition: background-color 0.3s ease;
   z-index: 10;
   position: absolute;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
 }
 
@@ -1382,11 +1382,11 @@
 }
 
 .carousel-arrow-left {
-  left: -30px;
+  left: 20px;
 }
 
 .carousel-arrow-right {
-  right: -30px;
+  right: 20px;
 }
 
 .carousel-dots {
