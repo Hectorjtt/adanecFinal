@@ -47,6 +47,19 @@
   animation: parpadeo-indicador 2s ease-in-out infinite;
 }
 
+.clickable-indicator {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.clickable-indicator:hover {
+  background: #e8d5ff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
 @keyframes parpadeo-indicador {
   0%, 100% {
     opacity: 1;

@@ -45,6 +45,20 @@ const IndicadorPagina = ({ currentPage }) => {
     }
   };
 
+  // Si es la página de dona, hacer el indicador clickeable
+  if (currentPage === 'dona') {
+    return (
+      <a 
+        href="https://assistant.velpay.mx/recurring-payment/12523"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`page-indicator ${getIndicatorClass()} clickable-indicator`}
+      >
+        {getIndicatorText()}
+      </a>
+    );
+  }
+
   return (
     <div className={`page-indicator ${getIndicatorClass()}`}>
       {getIndicatorText()}
