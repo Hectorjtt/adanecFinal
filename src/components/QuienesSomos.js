@@ -146,7 +146,8 @@ const QuienesSomos = () => {
       if (prev < maxSlide) {
         return prev + 1;
       }
-      return prev; // Se queda en el último slide
+      // Si está en el último slide, vuelve al primero (carrusel circular)
+      return 0;
     });
   };
 
@@ -155,7 +156,9 @@ const QuienesSomos = () => {
       if (prev > 0) {
         return prev - 1;
       }
-      return prev; // Se queda en el primer slide
+      // Si está en el primer slide, va al último (carrusel circular)
+      const maxSlide = Math.max(0, totalSlides - 1);
+      return maxSlide;
     });
   };
 
@@ -395,8 +398,6 @@ const QuienesSomos = () => {
               <button 
                 className="carousel-arrow carousel-arrow-left" 
                 onClick={prevSlide}
-                disabled={currentSlide === 0}
-                style={{ opacity: currentSlide === 0 ? 0.5 : 1, cursor: currentSlide === 0 ? 'not-allowed' : 'pointer' }}
               >
                 ‹
               </button>
@@ -440,8 +441,6 @@ const QuienesSomos = () => {
               <button 
                 className="carousel-arrow carousel-arrow-right" 
                 onClick={nextSlide}
-                disabled={currentSlide >= totalSlides - 1}
-                style={{ opacity: currentSlide >= totalSlides - 1 ? 0.5 : 1, cursor: currentSlide >= totalSlides - 1 ? 'not-allowed' : 'pointer' }}
               >
                 ›
               </button>

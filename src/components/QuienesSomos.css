@@ -770,9 +770,13 @@
     width: 50px !important;
     height: 50px !important;
     font-size: 28px !important;
-    z-index: 10;
+    z-index: 1000 !important;
     background: #e74c3c !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    touch-action: manipulation;
   }
   
   .carousel-arrow-left {
@@ -1026,9 +1030,13 @@
     width: 50px !important;
     height: 50px !important;
     font-size: 28px !important;
-    z-index: 10;
+    z-index: 1000 !important;
     background: #e74c3c !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    touch-action: manipulation;
   }
   
   .carousel-arrow-left {
@@ -1371,10 +1379,15 @@
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease;
-  z-index: 10;
+  z-index: 1000;
   position: absolute;
   top: 60%;
   transform: translateY(-50%);
+  pointer-events: auto;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .carousel-arrow:hover {
