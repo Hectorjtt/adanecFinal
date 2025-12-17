@@ -1,0 +1,30 @@
+{
+  "short_name": "ADANEC",
+  "name": "ADANEC | Pequeños Corazones",
+  "description": "ADANEC - Asociación de Ayuda a Niños en Estado Crítico A.B.P. Organización comprometida en atender a bebés, niñas, niños y adolescentes con cardiopatías congénitas en situación de vulnerabilidad en todo México.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logotipo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logotipo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#e74c3c",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary"
+}
+
+
+

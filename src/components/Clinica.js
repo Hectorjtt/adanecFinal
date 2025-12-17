@@ -28,7 +28,7 @@ const Clinica = () => {
 
   const serviciosInfo = [
     {
-      titulo: '¿Qué son las cardiopatías?',
+      titulo: '¿Que son las cardiopatías?',
       icono: '👶',
       imagen: clinica1Img,
       description: 'Las cardiopatías congénitas son defectos en la estructura del corazón que se originan por alteraciones durante el desarrollo fetal. Se consideran la patología congénita más frecuente, con un alto número de nacimientos afectados cada día.'
