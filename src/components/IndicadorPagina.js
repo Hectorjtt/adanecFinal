@@ -47,11 +47,22 @@ const IndicadorPagina = ({ currentPage }) => {
 
   // Si es la página de dona, hacer el indicador clickeable
   if (currentPage === 'dona') {
+    const handleDonaClick = (e) => {
+      // Asegurar que el enlace funcione en móvil
+      e.preventDefault();
+      window.open('https://assistant.velpay.mx/recurring-payment/12523', '_blank', 'noopener,noreferrer');
+    };
+
     return (
       <a 
         href="https://assistant.velpay.mx/recurring-payment/12523"
         target="_blank"
         rel="noopener noreferrer"
+        onClick={handleDonaClick}
+        onTouchStart={(e) => {
+          // Asegurar que funcione en dispositivos táctiles
+          e.stopPropagation();
+        }}
         className={`page-indicator ${getIndicatorClass()} clickable-indicator`}
       >
         {getIndicatorText()}

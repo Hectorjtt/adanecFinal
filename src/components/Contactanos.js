@@ -2,13 +2,25 @@ import React from 'react';
 import './Contactanos.css';
 
 const Contactanos = () => {
+  const handleUbicacionClick = () => {
+    window.open('https://maps.app.goo.gl/XLkhjJ1aNdcsFojY7?g_st=aw', '_blank', 'noopener,noreferrer');
+  };
+
+  const handleFacebookClick = () => {
+    window.open('https://www.facebook.com/adanec.abp/?locale=es_LA', '_blank', 'noopener,noreferrer');
+  };
+
+  const handleInstagramClick = () => {
+    window.open('https://www.instagram.com/adanecabp/', '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="contactanos-page">
       <div className="contactanos-content">
         <div className="contactanos-container">
           {/* Sección izquierda - Información de contacto */}
           <div className="contact-info-section">
-            <div className="contact-item">
+            <div className="contact-item clickable-contact" onClick={handleUbicacionClick}>
               <div className="contact-icon">
                 <img src="/contactanos/ubicacion.png" alt="Ubicación" className="icon-image" />
               </div>
@@ -64,7 +76,7 @@ const Contactanos = () => {
               </div>
             </div>
 
-            <div className="contact-item">
+            <div className="contact-item clickable-contact" onClick={handleFacebookClick}>
               <div className="contact-icon">
                 <img src="/contactanos/facebook.png" alt="Facebook" className="icon-image" />
               </div>
@@ -74,7 +86,7 @@ const Contactanos = () => {
               </div>
             </div>
 
-            <div className="contact-item">
+            <div className="contact-item clickable-contact" onClick={handleInstagramClick}>
               <div className="contact-icon">
                 <img src="/contactanos/insta.png" alt="Instagram" className="icon-image" />
               </div>
