@@ -208,7 +208,9 @@ const Clinica = () => {
               "testimonio saltillo pedro solis.mp4",
               "testimonio toluca - mia garcia.mp4",
               "testimonio toluca anibal cruz.mp4",
-              "testimonio toluca elisa sanchez.mp4"
+              "testimonio toluca elisa sanchez.mp4",
+              "testimonio jocelyn sanchez medicina fetal.mp4",
+              "testimonio karen garcia medicina fetal .mp4"
             ].map((videoName, index) => (
               <div key={index} className="testimonio-card">
                 <video 

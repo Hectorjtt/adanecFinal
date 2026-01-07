@@ -45,6 +45,11 @@ const CampanasEventos = () => {
       titulo: 'HIMALAYA',
       video: 'himalaya.mp4',
       tipo: 'evento'
+    },
+    {
+      titulo: 'ACAPULCO',
+      video: 'Acapulco.mp4',
+      tipo: 'campaña'
     }
   ];
 

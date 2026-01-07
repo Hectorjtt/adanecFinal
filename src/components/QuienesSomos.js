@@ -206,7 +206,7 @@ const QuienesSomos = () => {
                 </div>
               </div>
               <div className="stat-text">
-                <div className="stat-number">84 campañas</div>
+                <div className="stat-number">87 campañas</div>
                 <div className="stat-label">cirugía</div>
                 <div className="stat-number">+ 900 cirugías</div>
                 <div className="stat-label">de corazón</div>
@@ -232,7 +232,7 @@ const QuienesSomos = () => {
                 </div>
               </div>
               <div className="stat-text">
-                <div className="stat-number">111 campañas</div>
+                <div className="stat-number">112 campañas</div>
                 <div className="stat-label">diagnóstico</div>
                 <div className="stat-number">+ 3,680 diagnósticos</div>
               </div>
@@ -245,7 +245,7 @@ const QuienesSomos = () => {
                 </div>
               </div>
               <div className="stat-text">
-                <div className="stat-number">34 cirugías fetales</div>
+                <div className="stat-number">39 cirugías fetales</div>
               </div>
             </div>
           </div>
