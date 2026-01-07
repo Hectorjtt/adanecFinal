@@ -82,7 +82,8 @@ import circluloImg from '../assets/images/circlulo.png';
     'udem-logotipo-principal.png',
     'universidadlux.png',
     'upf logo.png',
-    'yco.png'
+    'yco.png',
+    'tle_logo.jpg'
   ];
 
 const QuienesSomos = () => {
