@@ -1,9 +1,11 @@
 .transparencia-page {
   min-height: calc(100vh - 200px);
-  background-color: #f5f5f5;
+  background-color: white;
   position: relative;
   padding: 20px;
   padding-bottom: 40px;
+  margin-top: -120px;
+  padding-top: 140px;
 }
 
 .transparencia-badge {

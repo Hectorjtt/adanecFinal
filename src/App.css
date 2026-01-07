@@ -38,6 +38,9 @@ main {
 .noticias-page {
   padding: 20px;
   position: relative;
+  background-color: white;
+  margin-top: -120px;
+  padding-top: 140px;
 }
 
 .noticias-badge {
