@@ -46,7 +46,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
             className={`nav-button ${currentPage === 'noticias' ? 'active' : ''}`}
             onClick={() => handleNavClick('noticias')}
           >
-            NOTICIAS
+            CAMPAÑAS
           </button>
           <button 
             className={`nav-button ${currentPage === 'transparencia' ? 'active' : ''}`}
