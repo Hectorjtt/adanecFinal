@@ -10,7 +10,7 @@ const IndicadorPagina = ({ currentPage }) => {
   const getIndicatorText = () => {
     switch(currentPage) {
       case 'noticias':
-        return 'NOTICIAS';
+        return 'CAMPAÑAS';
       case 'transparencia':
         return 'TRANSPARENCIA';
       case 'quienes-somos':
@@ -22,7 +22,7 @@ const IndicadorPagina = ({ currentPage }) => {
       case 'dona':
         return 'HAZ TU DONATIVO';
       default:
-        return 'NOTICIAS';
+        return 'CAMPAÑAS';
     }
   };
 
