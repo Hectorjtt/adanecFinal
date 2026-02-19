@@ -6,6 +6,13 @@ import informesImg from '../assets/images/informes.png';
 const Transparencia = () => {
   const informes = [
     {
+      año: '2025',
+      titulo: 'Informe anual 2025',
+      subtitulo: 'Disponible su descarga',
+      url: process.env.PUBLIC_URL + '/informes/Informe Anual ADANEC 2025.pdf',
+      disponible: true
+    },
+    {
       año: '2024',
       titulo: 'Informe anual 2024',
       subtitulo: 'Disponible su descarga',
