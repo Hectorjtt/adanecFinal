@@ -58,7 +58,7 @@ const CampanasEventos = () => {
       <h2 className="section-title">Campañas y eventos</h2>
       
       <div className="eventos-grid">
-        {eventos.map((evento, index) => (
+        {[...eventos].reverse().map((evento, index) => (
           <div key={index} className="evento-card">
             <div className="evento-video">
               <video 
