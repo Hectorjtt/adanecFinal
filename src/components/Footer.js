@@ -64,7 +64,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-section">
-          <h3 className="footer-title">REDEEEEEEEEES</h3>
+          <h3 className="footer-title">REDES</h3>
           <div className="social-icons">
             <a 
               href="https://www.facebook.com/adanec.abp/?locale=es_LA" 

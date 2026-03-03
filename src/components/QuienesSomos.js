@@ -8,7 +8,6 @@ import quienes4Img from '../assets/images/quienes4.png';
 import mv1Img from '../assets/images/mv1.png';
 import mv2Img from '../assets/images/mv2.png';
 import mv3Img from '../assets/images/mv3.png';
-import mapaImg from '../assets/images/mapa.png';
 import circluloImg from '../assets/images/circlulo.png';
 
 // Lista de todas las empresas en el orden en que aparecen en la carpeta
@@ -377,7 +376,7 @@ const QuienesSomos = () => {
             
             <div className="coverage-visuals">
               <div className="map-container">
-                <img src={mapaImg} alt="Mapa de México" className="mapa-image" />
+                <img src={process.env.PUBLIC_URL + '/mapa.png'} alt="Mapa de México" className="mapa-image" />
               </div>
               
               <div className="staff-photo-container">
